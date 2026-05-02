@@ -1,14 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'screens/home_screen.dart';
 import 'screens/auth/login_screen.dart';
 import 'screens/auth/register_screen.dart';
 import 'services/auth_service.dart';
+import 'services/task_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // No Parse SDK initialization needed - using direct HTTP calls
-  print('✓ App initialized with HTTP API integration');
+  try {
+    // Load environment variables from .env file
+    await dotenv.load(fileName: '.env');
+    print('✓ .env file loaded');
+
+    // Initialize authentication service with credentials
+    await AuthService.initialize();
+    print('✓ AuthService initialized');
+
+    // Initialize task service with credentials
+    await TaskService.initialize();
+    print('✓ TaskService initialized');
+  } catch (e) {
+    print('✗ Initialization error: $e');
+  }
 
   runApp(const TaskManagerApp());
 }

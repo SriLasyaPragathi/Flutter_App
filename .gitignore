@@ -92,6 +92,8 @@ app.*.map.json
 # Environment variables
 .env
 .env.local
+.env*
+!.env.example
 
 # API Keys and Secrets (DO NOT COMMIT SENSITIVE DATA)
 **/lib/config/parse_config.dart

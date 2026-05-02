@@ -1,11 +1,21 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Authentication Service - handles login, register, and logout with Back4App via HTTP
 class AuthService {
   static const String parseUrl = 'https://parseapi.back4app.com/parse';
-  static const String appId = 'w41T6KWkhArLGFGfNe5dIbsEwCjE0HK7O7myQwah';
-  static const String clientKey = 'cNQyDwVlkkriFNXhG0gPNXRkCdxf8luxLEm9RxKm';
+  static late final String appId;
+  static late final String clientKey;
+
+  /// Initialize credentials from environment
+  static Future<void> initialize() async {
+    appId = dotenv.env['PARSE_APP_ID'] ?? '';
+    clientKey = dotenv.env['PARSE_CLIENT_KEY'] ?? '';
+    if (appId.isEmpty || clientKey.isEmpty) {
+      throw Exception('Missing PARSE_APP_ID or PARSE_CLIENT_KEY in .env file');
+    }
+  }
 
   static String? _currentUserId;
   static String? _currentEmail;

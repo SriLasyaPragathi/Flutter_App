@@ -6,9 +6,15 @@ import 'auth_service.dart';
 /// Task Service - handles CRUD operations for tasks in Back4App via HTTP
 class TaskService {
   static const String parseUrl = 'https://parseapi.back4app.com/parse';
-  static const String appId = 'w41T6KWkhArLGFGfNe5dIbsEwCjE0HK7O7myQwah';
-  static const String clientKey = 'cNQyDwVlkkriFNXhG0gPNXRkCdxf8luxLEm9RxKm';
+  static late final String appId;
+  static late final String clientKey;
   static const String className = 'Task';
+
+  /// Initialize credentials from environment
+  static Future<void> initialize() async {
+    appId = AuthService.appId;
+    clientKey = AuthService.clientKey;
+  }
 
   /// Get common headers for Back4App API
   static Map<String, String> _getHeaders() {
