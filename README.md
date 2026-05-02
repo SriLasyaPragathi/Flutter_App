@@ -2,7 +2,7 @@
 
 A Flutter-based Task Manager Application that demonstrates CRUD (Create, Read, Update, Delete) operations with Back4App as a Backend-as-a-Service (BaaS).
 
-## 📋 Project Overview
+##  Project Overview
 
 This project showcases:
 - **User Authentication** – Register and login with email/password
@@ -11,7 +11,7 @@ This project showcases:
 - **Real-Time Sync** – Task updates reflected immediately across the app
 - **Secure Logout** – Session management and invalidation
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 Flutter App (Frontend)
@@ -47,7 +47,7 @@ task_manager_app/
 └── README.md                        # This file
 ```
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -133,11 +133,11 @@ flutter run -d web
 #### Task List Screen (Main Screen)
 - Displays all tasks created by the logged-in user
 - **Features:**
-  - ✓ Mark tasks as complete/incomplete (checkbox)
-  - ✏️ Edit task details (button)
-  - 🗑️ Delete task (button)
-  - ➕ Create new task (floating action button)
-  - 🔄 Pull-to-refresh to reload tasks
+  -  Mark tasks as complete/incomplete (checkbox)
+  - Edit task details (button)
+  - Delete task (button)
+  - Create new task (floating action button)
+  - Pull-to-refresh to reload tasks
   - User email displayed in header
 
 #### Create Task Screen
@@ -160,7 +160,7 @@ flutter run -d web
 - Clears user session from Back4App
 - Redirects to login screen
 
-## 🔄 CRUD Operations
+## CRUD Operations
 
 ### **Create (POST)**
 ```
@@ -186,7 +186,7 @@ Task List → Delete Button → TaskService.deleteTask()
 → Back4App REST API → Task Removed from Cloud
 ```
 
-## 📦 Dependencies
+##  Dependencies
 
 ```yaml
 dependencies:
@@ -196,16 +196,7 @@ dependencies:
   provider: ^6.0.0                  # State management (optional)
   cupertino_icons: ^1.0.2           # Icons
 ```
-
-## 🔐 Security Notes
-
-⚠️ **Important:**
-- **Never commit** `YOUR_APPLICATION_ID` or `YOUR_CLIENT_KEY` to public repositories
-- Use environment variables or configuration files (add to `.gitignore`) in production
-- Back4App handles password encryption and secure storage
-- Sessions are auto-invalidated on logout
-
-## 🧪 Testing the App
+##  Testing the App
 
 ### Manual Testing Checklist
 
@@ -230,7 +221,7 @@ dependencies:
    - [ ] Cannot access home screen without login
    - [ ] Re-login → same tasks appear (data persists)
 
-## 📊 Back4App Dashboard
+## Back4App Dashboard
 
 After creating tasks, verify in Back4App:
 
@@ -240,7 +231,7 @@ After creating tasks, verify in Back4App:
    - `_User` class with your registered users
    - `Task` class with your created tasks
 
-## 🎯 Troubleshooting
+## Troubleshooting
 
 ### App Crashes on Startup
 - **Cause:** Invalid Back4App credentials
@@ -258,60 +249,15 @@ After creating tasks, verify in Back4App:
 - **Cause:** Task list not reloaded after operation
 - **Fix:** Pull-to-refresh manually or app should auto-reload
 
-## 📚 Learning Resources
-
-- [Flutter Documentation](https://flutter.dev/docs)
-- [Parse Server Docs](https://docs.parseplatform.org/)
-- [Back4App Docs](https://www.back4app.com/docs)
-- [Dart Async Programming](https://dart.dev/guides/language/language-tour#asynchrony-support)
-
-## 🎓 Key Learnings
+##  Key Learnings
 
 This project teaches:
-1. ✅ Flutter widget hierarchy and navigation
-2. ✅ REST API calls with Parse SDK
-3. ✅ Backend-as-a-Service (BaaS) concept
-4. ✅ User authentication and session management
-5. ✅ CRUD operations on cloud database
-6. ✅ Error handling and validation
-7. ✅ Async/await patterns in Dart
-8. ✅ Model-View separation of concerns
-
-## 🚀 Deployment Options
-
-### Option 1: Deploy to Google Play Store
-- Generate release APK: `flutter build apk --release`
-- Upload to [Google Play Console](https://play.google.com/console)
-
-### Option 2: Deploy to Apple App Store
-- Generate release IPA: `flutter build ios --release`
-- Upload to [App Store Connect](https://appstoreconnect.apple.com)
-
-### Option 3: Web Deployment
-- Build web: `flutter build web`
-- Deploy static files to Firebase Hosting, Netlify, etc.
-
-## 📝 Assignment Deliverables
-
-- ✅ **Working Flutter App** – Demonstrates all CRUD operations
-- ✅ **GitHub Repository** – Proper `.gitignore`, no secrets exposed
-- ✅ **2-min YouTube Video** – Shows login, CRUD flow, logout
-- ✅ **PPT Presentation** – Architecture, features, learnings
-- ✅ **README** – Setup instructions and documentation
-
-## 📄 License
-
-This project is for educational purposes as part of the MTech Cross-Platform Development assignment.
-
+1. Flutter widget hierarchy and navigation
+2. REST API calls with Parse SDK
+3. Backend-as-a-Service (BaaS) concept
+4. User authentication and session management
+5. CRUD operations on cloud database
+6. Error handling and validation
+7. sync/await patterns in Dart
+8. Model-View separation of concerns
 ---
-
-## 🤝 Support
-
-For issues or questions:
-1. Check the [Flutter Troubleshooting guide](https://flutter.dev/docs/testing/troubleshooting)
-2. Visit [Back4App Support](https://www.back4app.com/support)
-3. Review the code comments in this repository
-
----
-
-**Happy Coding! 🎉**
