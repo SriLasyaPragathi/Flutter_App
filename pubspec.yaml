@@ -1,0 +1,77 @@
+name: task_manager_app
+description: "A Flutter Task Manager App using Back4App BaaS for CRUD operations with authentication."
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # HTTP requests for Back4App API
+  http: ^1.1.0
+  
+  # JSON serialization
+  convert: ^3.1.1
+  
+  # UI and Material Design
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the Flutter team is
+  # curated to encourage good coding practices while maximizing compatibility with
+  # older versions of the Dart SDK as well as the Dart VM and analysis server.
+  # However, it is possible to override the set of lints and to enable additional
+  # lints by modifying the above dependency on flutter_lints to include additional
+  # lints that are not included in flutter_lints by default. A list of all available
+  # lints and their documentation is published at https://dart.dev/lints.
+  #
+  # Instead of adding the flutter_lints package, each Dart file can be analyzed with
+  # its own set of lints defined in the analysis_options.yaml file which can be
+  # found at the root of this project.
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - assets/
+  #
+  # An image asset can refer to one or more resolution-specific "sub-assets" under the
+  # image/ directory. For example, image/my_icon.png, image/my_icon@2x.png and
+  # image/my_icon@3x.png would be bundled together by the framework into a single
+  # asset with the key "image/my_icon.png". (Image files can be a maximum of 1600
+  # pixels in 2560 pixels in total.)
+  #
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the Font Family name, and a "fonts" key with a
+  # list specifying the font asset and the weight, style, etc.
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: assets/fonts/Schyler-Regular.ttf
+  #       - asset: assets/fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: assets/fonts/TrajanPro.ttf
+  #       - asset: assets/fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
